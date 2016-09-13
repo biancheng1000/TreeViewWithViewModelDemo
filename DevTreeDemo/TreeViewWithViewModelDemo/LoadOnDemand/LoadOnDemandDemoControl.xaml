@@ -1,0 +1,79 @@
+﻿<UserControl 
+  x:Class="TreeViewWithViewModelDemo.LoadOnDemand.LoadOnDemandDemoControl"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:local="clr-namespace:TreeViewWithViewModelDemo.LoadOnDemand"
+  >
+    <UserControl.Resources>
+        <local:ClassTypeValueConvert x:Key="ClassConvert"/>
+        <local:PowerLeverValueConvert x:Key="levelConvert"/>
+        <!-- DataGrid Background -->
+        <LinearGradientBrush x:Key="BlueLightGradientBrush" StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Offset="0" Color="#FFEAF3FF"/>
+            <GradientStop Offset="0.654" Color="#FFC0DEFF"/>
+            <GradientStop Offset="1" Color="#FFC0D9FB"/>
+        </LinearGradientBrush>
+
+        <!-- DatGrid style -->
+        <Style TargetType="{x:Type DataGrid}">
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="Background" Value="{StaticResource BlueLightGradientBrush}" />
+            <Setter Property="BorderBrush" Value="#FFA6CCF2" />
+            <Setter Property="RowBackground" Value="White" />
+            <Setter Property="AlternatingRowBackground" Value="#FDFFD0" />
+            <Setter Property="HorizontalGridLinesBrush" Value="Transparent" />
+            <Setter Property="VerticalGridLinesBrush" Value="#FFD3D0" />
+            <Setter Property="RowHeaderWidth" Value="0" />
+
+        </Style>
+
+        <!-- Enable rows as drop targets -->
+        <Style TargetType="{x:Type DataGridRow}">
+            <Setter Property="AllowDrop" Value="True" />
+        </Style>
+    </UserControl.Resources>
+    <Grid Width="742" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="272*"/>
+        </Grid.ColumnDefinitions>
+        <TreeView ItemsSource="{Binding Devices}" MinWidth="200" MinHeight="200" Name="tree" Grid.Column="0">
+            <TreeView.ItemContainerStyle>
+                <Style TargetType="{x:Type TreeViewItem}">
+                    <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                    <Setter Property="FontWeight" Value="Normal"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="ContextMenu" Value="{Binding  PopupMenu}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TreeView.ItemContainerStyle>
+            <TreeView.Resources>
+                <HierarchicalDataTemplate 
+                DataType="{x:Type local:DeviceItemViewModel}" 
+                ItemsSource="{Binding Children}"
+                >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="16" Height="16" Margin="3,0" Source="{Binding ImageSource}" />
+                        <TextBlock Text="{Binding DevName}" />
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.Resources>
+        </TreeView>
+        <DataGrid Name="Grid"  ItemsSource="{Binding Content}" AutoGenerateColumns="False" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Grid.Column="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="设备名称" Binding="{Binding DevName}"/>
+                <DataGridTextColumn Header="电压等级" Binding="{Binding PowerLevel,Converter={StaticResource levelConvert}}"/>
+                <DataGridTextColumn Header="设备类型" Binding="{Binding DevClassID,Converter={StaticResource ClassConvert}}"/>
+                <DataGridTextColumn Header="线路长度" Binding="{Binding Lenght}" Visibility="Collapsed"/>
+                <DataGridTextColumn Header="起止杆塔号" Binding="{Binding PoleTowerMount}" Visibility="Collapsed" />
+                <DataGridTextColumn Header="运行单位" Binding="{Binding RunDepartment}"/>
+                <DataGridTextColumn Header="地区局" Binding="{Binding LocalDepart}"/>
+                <DataGridTextColumn Header="县局或线路工区" Binding="{Binding LineWorkDepart}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

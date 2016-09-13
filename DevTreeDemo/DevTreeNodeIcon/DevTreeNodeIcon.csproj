@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5D59954-83CF-467B-8152-2D6ADD769EA3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DevTreeNodeNameSpace</RootNamespace>
+    <AssemblyName>DevTreeNodeIcon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>D:\GridResourceManagement\PowerGridClient\Src\Dependency\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>GrmWebClient.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DevTreeNodeIconClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\City.png" />
+    <Resource Include="Images\Region.png" />
+    <Resource Include="Images\State.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\00_folderclosed.bmp" />
+    <Content Include="Images\00_folderclosed.png" />
+    <Content Include="Images\00_folder_02.bmp" />
+    <Content Include="Images\00_folder_02.png" />
+    <Content Include="Images\01_subst.bmp" />
+    <Content Include="Images\01_subst.png" />
+    <Content Include="Images\02_branch.bmp" />
+    <Content Include="Images\02_branch.png" />
+    <Content Include="Images\03_pole.bmp" />
+    <Content Include="Images\03_pole.png" />
+    <Content Include="Images\04_breaker.bmp" />
+    <Content Include="Images\04_breaker.png" />
+    <Content Include="Images\05_switch.bmp" />
+    <Content Include="Images\05_switch.png" />
+    <Content Include="Images\06_loadswitch.bmp" />
+    <Content Include="Images\06_loadswitch.png" />
+    <Content Include="Images\07_fuse.bmp" />
+    <Content Include="Images\07_fuse.png" />
+    <Content Include="Images\08_trans.bmp" />
+    <Content Include="Images\08_trans.png" />
+    <Content Include="Images\09_dhouse.bmp" />
+    <Content Include="Images\09_dhouse.png" />
+    <Content Include="Images\10_miduser.bmp" />
+    <Content Include="Images\10_miduser.png" />
+    <Content Include="Images\11_switchstation.bmp" />
+    <Content Include="Images\11_switchstation.png" />
+    <Content Include="Images\12_switchtank.bmp" />
+    <Content Include="Images\12_switchtank.png" />
+    <Content Include="Images\13_branchtank.bmp" />
+    <Content Include="Images\13_branchtank.png" />
+    <Content Include="Images\14_transtank.bmp" />
+    <Content Include="Images\14_transtank.png" />
+    <Content Include="Images\15_cableditch.bmp" />
+    <Content Include="Images\15_cableditch.png" />
+    <Content Include="Images\16_cablewell.bmp" />
+    <Content Include="Images\16_cablewell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GrmWebClient.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

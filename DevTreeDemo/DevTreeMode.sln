@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevTreeDemo", "TreeViewWithViewModelDemo\DevTreeDemo.csproj", "{E10EB261-1B7B-4112-863E-2B197F08DDCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLib", "BusinessLib\BusinessLib.csproj", "{10B78211-364B-46CF-B310-22457F5669D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevTreeNodeIcon", "DevTreeNodeIcon\DevTreeNodeIcon.csproj", "{B5D59954-83CF-467B-8152-2D6ADD769EA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridTest", "DataGridTest\DataGridTest.csproj", "{CE9E2F9A-68A2-4B41-B3DF-558487447E14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E10EB261-1B7B-4112-863E-2B197F08DDCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E10EB261-1B7B-4112-863E-2B197F08DDCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E10EB261-1B7B-4112-863E-2B197F08DDCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E10EB261-1B7B-4112-863E-2B197F08DDCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10B78211-364B-46CF-B310-22457F5669D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10B78211-364B-46CF-B310-22457F5669D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10B78211-364B-46CF-B310-22457F5669D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10B78211-364B-46CF-B310-22457F5669D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D59954-83CF-467B-8152-2D6ADD769EA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D59954-83CF-467B-8152-2D6ADD769EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D59954-83CF-467B-8152-2D6ADD769EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D59954-83CF-467B-8152-2D6ADD769EA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE9E2F9A-68A2-4B41-B3DF-558487447E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE9E2F9A-68A2-4B41-B3DF-558487447E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE9E2F9A-68A2-4B41-B3DF-558487447E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE9E2F9A-68A2-4B41-B3DF-558487447E14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
